@@ -11,7 +11,7 @@ In this article, we will build an **Airline Reservation System Project** using J
 - **Java JDK**: Ensure Java JDK is installed on your system.
 - **IDE**: We recommend using **Eclipse IDE** for this project, though **NetBeans** can also be used.
 - **MySQL**: Install MySQL on your system.
-- **MySQL Connector**: Download the MySQL connector [here](#).
+- **MySQL Connector**: Download the MySQL connector.
 
 ### Steps to Setup
 1. **Create a New Project**: Start by creating a new project in your IDE and name it as desired.

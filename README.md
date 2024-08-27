@@ -82,4 +82,3 @@ In this project, we developed a GUI-based **Airline Reservation System** using J
 
 ---
 
-This format should help in making the information more structured and easier to understand.

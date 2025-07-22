@@ -1,84 +1,132 @@
+# ✈️ Airline Reservation System Project in Java
 
+> A GUI-based desktop application for booking airline tickets, managing flight details, and handling passenger registrations — built using **Java** and **MySQL**.
 
-# Airline Reservation System Project in Java
+---
 
-## Introduction
-In this article, we will build an **Airline Reservation System Project** using Java and MySQL with source code. This project is perfect for those at an intermediate level in Java who wish to enhance their coding skills. The users can perform various functionalities such as accessing the Home Page, Registration, Viewing Flight Details, and Booking Tickets. Let’s get started!
+## 📌 Introduction
 
-## Setting Up the Development Environment
+This **Airline Reservation System** is a simple yet functional project aimed at intermediate Java learners. It provides a user-friendly interface for flight management, passenger registration, and ticket booking using **Java Swing** and **MySQL** for backend data storage.
 
-### Prerequisites
-- **Java JDK**: Ensure Java JDK is installed on your system.
-- **IDE**: We recommend using **Eclipse IDE** for this project, though **NetBeans** can also be used.
-- **MySQL**: Install MySQL on your system.
-- **MySQL Connector**: Download the MySQL connector.
+---
 
-### Steps to Setup
-1. **Create a New Project**: Start by creating a new project in your IDE and name it as desired.
-2. **Package Creation**: In the `src` folder, create a package named `airline`. This package will contain different files for various modules.
-3. **Database Connection**:
-    - Download the MySQL connector.
-    - In Eclipse, under your project, expand **External Libraries**.
-    - Right-click, select **Open Library Settings**, then select the **Libraries** tab.
-    - Click the **+** button, browse to the downloaded jar file, and add it as a dependency to your project.
-    - Steps may differ if using a different IDE.
+## 🧰 Technologies Used
 
-## MySQL Setup for Airline Reservation System Project in Java
+| Category       | Technology           |
+|----------------|----------------------|
+| Programming    | Java (Swing, AWT)    |
+| Database       | MySQL                |
+| Connectivity   | MySQL Connector/J    |
+| IDE Suggested  | Eclipse / NetBeans   |
 
-### Database Creation
-1. **Create a Database**:
-    ```sql
-    CREATE DATABASE airline;
-    ```
+---
 
-2. **Select the Database**:
-    ```sql
-    USE airline;
-    ```
+## 🛠️ Setting Up the Development Environment
 
-3. **Create Flights Table**:
-    ```sql
-    CREATE TABLE flights (
-        flight_id INT PRIMARY KEY,
-        flight_name VARCHAR(25),
-        fdate DATE,
-        time VARCHAR(10),
-        class VARCHAR(10)
-    );
-    ```
+### ✅ Prerequisites
 
-4. **Create Register Table**:
-    ```sql
-    CREATE TABLE register (
-        passenger_id INT PRIMARY KEY,
-        first_name VARCHAR(25),
-        last_name VARCHAR(25),
-        contact_no VARCHAR(10),
-        address VARCHAR(250),
-        email VARCHAR(25)
-    );
-    ```
+- 🔹 Java JDK (8 or above)
+- 🔹 Eclipse or NetBeans IDE
+- 🔹 MySQL Server
+- 🔹 MySQL Connector/J (JDBC driver)
 
-## Project Modules
+---
 
-### 1. Home Page Module
-- **Description**: After entering the correct username and password on the login page, the user is directed to the home page of the airline reservation system.
-- **File Name**: `main.java`
+### 🚀 Setup Instructions
 
-### 2. Registration Module
-- **Description**: This module allows the addition of new passenger details. It also provides functionalities to edit or delete existing passenger records.
-- **File Name**: `Registration.java`
+1. **Create a New Project**  
+   Open Eclipse and create a new Java project named `AirlineReservationSystem`.
 
-### 3. Flights Module
-- **Description**: This module displays flight details.
-- **File Name**: `Flights.java`
+2. **Add Package**  
+   Create a package named `airline` under `src`.
 
-### 4. Booking Module
-- **Description**: This module helps in booking tickets.
-- **File Name**: `Booking.java`
+3. **Add MySQL Connector**  
+   - Download MySQL Connector from [MySQL Official Site](https://dev.mysql.com/downloads/connector/j/).
+   - In Eclipse:  
+     `Project → Properties → Java Build Path → Libraries → Add External JARs → Select mysql-connector.jar`
 
-## Conclusion
-In this project, we developed a GUI-based **Airline Reservation System** using Java and MySQL. The application allows users to perform essential operations such as accessing the Home Page, Registration, Viewing Flight Details, and Booking Tickets. We recommend adding more modules and functionalities to make this airline reservation system more comprehensive and applicable to real-world scenarios.
+4. **Start Coding!**  
+   Begin by creating the required Java files inside the `airline` package.
+
+---
+
+## 🗄️ MySQL Database Setup
+
+### 🔧 Step-by-Step SQL Setup
+
+```sql
+-- Create the database
+CREATE DATABASE airline;
+
+-- Use the created database
+USE airline;
+
+-- Create flights table
+CREATE TABLE flights (
+    flight_id INT PRIMARY KEY,
+    flight_name VARCHAR(25),
+    fdate DATE,
+    time VARCHAR(10),
+    class VARCHAR(10)
+);
+
+-- Create register table
+CREATE TABLE register (
+    passenger_id INT PRIMARY KEY,
+    first_name VARCHAR(25),
+    last_name VARCHAR(25),
+    contact_no VARCHAR(10),
+    address VARCHAR(250),
+    email VARCHAR(25)
+);
+```
+
+---
+
+## 📦 Project Modules Overview
+
+### 1. 🏠 Home Page Module
+- **Description**: Authenticated users are redirected here after login. This is the dashboard of the system.
+- **File**: `Main.java`
+
+---
+
+### 2. 📝 Registration Module
+- **Description**: Handles new passenger registrations. Includes CRUD functionality for managing passenger records.
+- **File**: `Registration.java`
+
+---
+
+### 3. ✈️ Flights Module
+- **Description**: Displays all available flight details pulled from the database.
+- **File**: `Flights.java`
+
+---
+
+### 4. 🎫 Booking Module
+- **Description**: Enables users to book flight tickets with available flight data.
+- **File**: `Booking.java`
+
+---
+
+## 📸 Sample GUI Screens (Optional)
+
+> _Add screenshots or GIFs of your application UI to showcase the user interface._
+
+---
+
+## 🧠 Future Enhancements
+
+- ✅ Add login authentication with roles (Admin/Passenger)  
+- ✅ Include booking history and cancellation features  
+- ✅ Integrate email confirmations  
+- ✅ Payment gateway simulation  
+
+---
+
+## ✅ Conclusion
+
+This project offers a hands-on approach to learning **Java GUI development** and **MySQL database integration**. The **Airline Reservation System** is a great starting point for building scalable, modular applications in Java. You can enhance this system further by adding authentication, real-time seat availability, and ticketing options.
 
 ---
 
